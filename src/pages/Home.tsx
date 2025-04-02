@@ -28,7 +28,9 @@ import {
   AlignLeft,
   Search,
   Link,
-  FileSpreadsheet
+  FileSpreadsheet,
+  Server,
+  Wifi
 } from 'lucide-react';
 
 import ToolCard from '../components/ToolCard';
@@ -57,6 +59,9 @@ import LoremIpsumGenerator from '../tools/LoremIpsumGenerator';
 import RegexTester from '../tools/RegexTester';
 import SlugGenerator from '../tools/SlugGenerator';
 import CsvJsonConverter from '../tools/CsvJsonConverter';
+import IpAddressLookup from '../tools/IpAddressLookup';
+import DnsLookup from '../tools/DnsLookup';
+import HttpHeaderViewer from '../tools/HttpHeaderViewer';
 
 // Organize tools into categories
 const toolCategories = [
@@ -256,6 +261,33 @@ const toolCategories = [
         description: 'Generate random numbers, strings, etc.',
         icon: Dices,
         component: RandomGenerator,
+      },
+    ]
+  },
+  {
+    id: 'network-tools',
+    name: 'Network Tools',
+    tools: [
+      {
+        id: 'ip-address-lookup',
+        title: 'IP Address Lookup',
+        description: 'Show geolocation, ISP, and other details for an IP',
+        icon: Wifi,
+        component: IpAddressLookup,
+      },
+      {
+        id: 'dns-lookup',
+        title: 'DNS Lookup',
+        description: 'Perform DNS lookups for various record types',
+        icon: Server,
+        component: DnsLookup,
+      },
+      {
+        id: 'http-header-viewer',
+        title: 'HTTP Header Viewer',
+        description: 'View HTTP response headers for any URL',
+        icon: FileCode,
+        component: HttpHeaderViewer,
       },
     ]
   },
