@@ -24,7 +24,11 @@ import {
   Table,
   Map,
   Globe,
-  Gauge
+  Gauge,
+  AlignLeft,
+  Search,
+  Link,
+  FileSpreadsheet
 } from 'lucide-react';
 
 import ToolCard from '../components/ToolCard';
@@ -49,6 +53,10 @@ import DateCalculator from '../tools/DateCalculator';
 import UnitConverter from '../tools/UnitConverter';
 import RandomGenerator from '../tools/RandomGenerator';
 import TimeZoneConverter from '../tools/TimeZoneConverter';
+import LoremIpsumGenerator from '../tools/LoremIpsumGenerator';
+import RegexTester from '../tools/RegexTester';
+import SlugGenerator from '../tools/SlugGenerator';
+import CsvJsonConverter from '../tools/CsvJsonConverter';
 
 // Organize tools into categories
 const toolCategories = [
@@ -91,6 +99,20 @@ const toolCategories = [
         icon: Scissors,
         component: TextFormatter, // Use TextFormatter as it has case conversion functionality
       },
+      {
+        id: 'lorem-ipsum-generator',
+        title: 'Lorem Ipsum Generator',
+        description: 'Generate placeholder text for designs',
+        icon: AlignLeft,
+        component: LoremIpsumGenerator,
+      },
+      {
+        id: 'slug-generator',
+        title: 'Slug Generator',
+        description: 'Convert text to URL-friendly slugs',
+        icon: Link,
+        component: SlugGenerator,
+      },
     ]
   },
   {
@@ -131,6 +153,20 @@ const toolCategories = [
         description: 'Escape and unescape HTML entities',
         icon: Code,
         component: HtmlEscape,
+      },
+      {
+        id: 'regex-tester',
+        title: 'Regex Tester',
+        description: 'Test regular expressions with highlights',
+        icon: Search,
+        component: RegexTester,
+      },
+      {
+        id: 'csv-json-converter',
+        title: 'CSV <-> JSON Converter',
+        description: 'Convert between CSV and JSON formats',
+        icon: FileSpreadsheet,
+        component: CsvJsonConverter,
       },
     ]
   },
