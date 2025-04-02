@@ -30,7 +30,10 @@ import {
   Link,
   FileSpreadsheet,
   Server,
-  Wifi
+  Wifi,
+  Tag,
+  Bot,
+  CheckCircle
 } from 'lucide-react';
 
 import ToolCard from '../components/ToolCard';
@@ -62,6 +65,9 @@ import CsvJsonConverter from '../tools/CsvJsonConverter';
 import IpAddressLookup from '../tools/IpAddressLookup';
 import DnsLookup from '../tools/DnsLookup';
 import HttpHeaderViewer from '../tools/HttpHeaderViewer';
+import MetaTagGenerator from '../tools/MetaTagGenerator';
+import RobotsTxtGenerator from '../tools/RobotsTxtGenerator';
+import WebsiteDownChecker from '../tools/WebsiteDownChecker';
 
 // Organize tools into categories
 const toolCategories = [
@@ -288,6 +294,27 @@ const toolCategories = [
         description: 'View HTTP response headers for any URL',
         icon: FileCode,
         component: HttpHeaderViewer,
+      },
+      {
+        id: 'meta-tag-generator',
+        title: 'Meta Tag Generator',
+        description: 'Create meta tags for SEO and social sharing',
+        icon: Tag,
+        component: MetaTagGenerator,
+      },
+      {
+        id: 'robots-txt-generator',
+        title: 'robots.txt Generator',
+        description: 'Create robots.txt files to control web crawlers',
+        icon: Bot,
+        component: RobotsTxtGenerator,
+      },
+      {
+        id: 'website-down-checker',
+        title: 'Website Down Checker',
+        description: 'Check if a website is online or down',
+        icon: CheckCircle,
+        component: WebsiteDownChecker,
       },
     ]
   },
