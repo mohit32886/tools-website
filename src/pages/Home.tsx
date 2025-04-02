@@ -48,6 +48,7 @@ import QrCodeGenerator from '../tools/QrCodeGenerator';
 import DateCalculator from '../tools/DateCalculator';
 import UnitConverter from '../tools/UnitConverter';
 import RandomGenerator from '../tools/RandomGenerator';
+import TimeZoneConverter from '../tools/TimeZoneConverter';
 
 // Organize tools into categories
 const toolCategories = [
@@ -198,6 +199,13 @@ const toolCategories = [
         description: 'Calculate time between dates',
         icon: Calendar,
         component: DateCalculator,
+      },
+      {
+        id: 'time-zone-converter',
+        title: 'Time Zone Converter',
+        description: 'Convert times between time zones',
+        icon: Clock,
+        component: TimeZoneConverter,
       },
       {
         id: 'unit-converter',
