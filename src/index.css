@@ -1,0 +1,127 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles for tool categories */
+.category-container {
+  scroll-margin-top: 6rem;
+}
+
+/* Ensure consistent card heights */
+@media (min-width: 1024px) {
+  .tool-card-grid {
+    grid-template-rows: repeat(1, minmax(0, 1fr));
+  }
+}
+
+/* Smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Common styles for tool components */
+.code-block {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  background-color: #f8f9fa;
+  border-radius: 0.375rem;
+  border: 1px solid #e2e8f0;
+  padding: 0.75rem;
+  white-space: pre-wrap;
+  word-break: break-word;
+  tab-size: 4;
+}
+
+/* Diff styling */
+.diff-added {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.diff-removed {
+  background-color: #fee2e2;
+  color: #b91c1c;
+}
+
+.diff-unchanged {
+  color: #6b7280;
+}
+
+/* Styles for form inputs across tools */
+.tool-input {
+  @apply w-full p-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none;
+  transition: all 0.2s ease-in-out;
+}
+
+.tool-button {
+  @apply bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50;
+  transition: all 0.2s ease-in-out;
+}
+
+.tool-secondary-button {
+  @apply bg-gray-200 text-gray-800 py-2 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Color swatch and palette styles */
+.color-swatch {
+  @apply w-8 h-8 rounded-full border border-gray-300 cursor-pointer shadow-sm;
+  transition: transform 0.2s ease;
+}
+
+.color-swatch:hover {
+  transform: scale(1.1);
+}
+
+/* Image preview container */
+.image-preview {
+  @apply border-2 border-dashed border-gray-300 rounded-lg flex items-center justify-center bg-gray-50;
+  min-height: 200px;
+}
+
+/* Drag and drop area */
+.drag-drop-area {
+  @apply border-2 border-dashed border-gray-300 rounded-lg p-6 flex flex-col items-center justify-center bg-gray-50 transition-colors duration-200;
+  min-height: 150px;
+}
+
+.drag-drop-area.active {
+  @apply border-blue-500 bg-blue-50;
+}
+
+/* Copy button styling */
+.copy-button {
+  @apply text-xs bg-gray-200 hover:bg-gray-300 px-2 py-1 rounded flex items-center gap-1;
+  transition: all 0.15s ease-in-out;
+}
+
+/* Tool info box */
+.info-box {
+  @apply bg-blue-50 p-3 rounded-lg text-xs text-blue-700;
+}
+
+/* Error message styling */
+.error-message {
+  @apply text-red-600 bg-red-50 p-3 rounded-lg text-sm border border-red-200;
+}
+
+/* Result container styling */
+.result-container {
+  @apply bg-gray-50 p-3 rounded-lg border;
+}
+
+/* Responsive adjustments for tool modals */
+@media (max-width: 640px) {
+  .modal-content {
+    @apply w-[calc(100%-2rem)] p-4;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.fade-in {
+  animation: fadeIn 0.3s ease-in-out;
+}
